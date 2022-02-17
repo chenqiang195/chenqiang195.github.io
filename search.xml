@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hexo基础</title>
+    <url>/notes/53593.html</url>
+    <content><![CDATA[<h2 id="常见命令"><a href="#常见命令" class="headerlink" title="常见命令"></a>常见命令</h2><h3 id="启动服务器。默认情况下，访问网址为：-http-localhost-4000"><a href="#启动服务器。默认情况下，访问网址为：-http-localhost-4000" class="headerlink" title="启动服务器。默认情况下，访问网址为： http://localhost:4000/"></a>启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/">http://localhost:4000/</a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<p>| 该命令可以简写为： <code>hexo s</code></p>
+<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<p>| 该命令可以简写为： <code>hexo d</code></p>
+<h3 id="清除缓存"><a href="#清除缓存" class="headerlink" title="清除缓存"></a>清除缓存</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+<p>清除缓存文件 (db.json) 和已生成的静态文件 (public)。<br>在某些情况（尤其是更换主题后），发现对站点的更改无论如何也不生效，可能需要运行该命令。</p>
+<h3 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">&quot;文章标题&quot;</span></span><br></pre></td></tr></table></figure>
+<p>文章模板基础设置</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 文章标题</span><br><span class="line">categories:</span><br><span class="line"><span class="bullet">-</span> 一级分类</span><br><span class="line"><span class="bullet">-</span> 二级分类</span><br><span class="line">tags:</span><br><span class="line"><span class="bullet">-</span> 标签1</span><br><span class="line">  abbrlink: 文章ID</span><br><span class="line"><span class="section">  date: 创建时间</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Laravel设置PHP错误级别</title>
+    <url>/notes/1467.html</url>
+    <content><![CDATA[<h3 id="一、Laravel配置"><a href="#一、Laravel配置" class="headerlink" title="一、Laravel配置"></a>一、Laravel配置</h3><p>在项目路径 <code>/app/Providers/AppServiceProvider.php</code> 文件中找到 <code>boot()</code> 方法，新增一行代码。</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="title function_ invoke__">error_reporting</span>(E_ALL^E_WARNING^E_NOTICE);</span><br></pre></td></tr></table></figure>
+
+<h3 id="二、error-reporting-函数详细说明"><a href="#二、error-reporting-函数详细说明" class="headerlink" title="二、error_reporting 函数详细说明"></a>二、<code>error_reporting</code> 函数详细说明</h3><h4 id="1、设置-PHP-的报错级别并返回当前级别，可配置级别如下："><a href="#1、设置-PHP-的报错级别并返回当前级别，可配置级别如下：" class="headerlink" title="1、设置 PHP 的报错级别并返回当前级别，可配置级别如下："></a>1、设置 PHP 的报错级别并返回当前级别，可配置级别如下：</h4><ul>
+<li>E_ALL - 所有的错误和警告 </li>
+<li>E_ERROR - 致命性运行时错</li>
+<li>E_WARNING - 运行时警告（非致命性错)</li>
+<li>E_PARSE - 编译时解析错误</li>
+<li>E_NOTICE - 运行时提醒(这些经常是是你的代码的bug引起的，也可能是有意的行为造成的。(如：基于未初始化的变量自动初始化为一个空字符串的事实而使用一个未初始化的变量)</li>
+<li>E_CORE_ERROR - 发生于PHP启动时初始化过程中的致命错误</li>
+<li>E_CORE_WARNING - 发生于PHP启动时初始化过程中的警告(非致命性错)</li>
+<li>E_COMPILE_ERROR - 编译时致命性错</li>
+<li>E_COMPILE_WARNING - 编译时警告(非致命性错)</li>
+<li>E_USER_ERROR - 用户产生的出错消息</li>
+<li>E_USER_WARNING - 用户产生的警告消息</li>
+<li>E_USER_NOTICE - 用户产生的提醒消息</li>
+</ul>
+<h4 id="2、使用方法"><a href="#2、使用方法" class="headerlink" title="2、使用方法"></a>2、使用方法</h4><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="title function_ invoke__">error_reporting</span>(<span class="number">0</span>);<span class="comment">//禁用错误报告 </span></span><br><span class="line"><span class="title function_ invoke__">error_reporting</span>(E_ALL ^ E_NOTICE);<span class="comment">//显示除去 E_NOTICE 之外的所有错误信息 </span></span><br><span class="line"><span class="title function_ invoke__">error_reporting</span>(E_ALL^E_WARNING^E_NOTICE);<span class="comment">//显示除去E_WARNING E_NOTICE 之外的所有错误信息 </span></span><br><span class="line"><span class="title function_ invoke__">error_reporting</span>(E_ERROR | E_WARNING | E_PARSE);<span class="comment">//显示运行时错误，与error_reporting(E_ALL ^ E_NOTICE);效果相同。</span></span><br><span class="line"><span class="title function_ invoke__">error_reporting</span>(E_ALL);<span class="comment">//显示所有错误</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>Laravel</tag>
+        <tag>PHP</tag>
+        <tag>错误报警</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Redis与Memcache的区别</title>
+    <url>/notes/37016.html</url>
+    <content><![CDATA[<p><code>Redis</code> 和 <code>Memcache</code> 都是基于内存的数据存储系统，它们的区别在于：</p>
+<h3 id="1、数据操作不同"><a href="#1、数据操作不同" class="headerlink" title="1、数据操作不同"></a>1、数据操作不同</h3><h3 id="2、内存管理机制不同"><a href="#2、内存管理机制不同" class="headerlink" title="2、内存管理机制不同"></a>2、内存管理机制不同</h3><h3 id="3、性能不同"><a href="#3、性能不同" class="headerlink" title="3、性能不同"></a>3、性能不同</h3><h3 id="4、集群管理不同"><a href="#4、集群管理不同" class="headerlink" title="4、集群管理不同"></a>4、集群管理不同</h3>]]></content>
+      <categories>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>Redis</tag>
+        <tag>Memcache</tag>
+      </tags>
+  </entry>
+</search>
