@@ -20,20 +20,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Redis与Memcache的区别</title>
-    <url>/notes/37016.html</url>
-    <content><![CDATA[<p><code>Redis</code> 和 <code>Memcache</code> 都是基于内存的数据存储系统，它们的区别在于：</p>
-<h3 id="1、数据操作不同"><a href="#1、数据操作不同" class="headerlink" title="1、数据操作不同"></a>1、数据操作不同</h3><h3 id="2、内存管理机制不同"><a href="#2、内存管理机制不同" class="headerlink" title="2、内存管理机制不同"></a>2、内存管理机制不同</h3><h3 id="3、性能不同"><a href="#3、性能不同" class="headerlink" title="3、性能不同"></a>3、性能不同</h3><h3 id="4、集群管理不同"><a href="#4、集群管理不同" class="headerlink" title="4、集群管理不同"></a>4、集群管理不同</h3>]]></content>
-      <categories>
-        <category>后端</category>
-      </categories>
-      <tags>
-        <tag>Redis</tag>
-        <tag>Memcache</tag>
-        <tag>缓存</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Laravel设置PHP错误级别</title>
     <url>/notes/1467.html</url>
     <content><![CDATA[<h3 id="一、Laravel配置"><a href="#一、Laravel配置" class="headerlink" title="一、Laravel配置"></a>一、Laravel配置</h3><p>在项目路径 <code>/app/Providers/AppServiceProvider.php</code> 文件中找到 <code>boot()</code> 方法，新增一行代码。</p>
@@ -61,6 +47,20 @@
         <tag>Laravel</tag>
         <tag>PHP</tag>
         <tag>错误报警</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Redis与Memcache的区别</title>
+    <url>/notes/37016.html</url>
+    <content><![CDATA[<p><code>Redis</code> 和 <code>Memcache</code> 都是基于内存的数据存储系统，它们的区别在于：</p>
+<h3 id="1、数据操作不同"><a href="#1、数据操作不同" class="headerlink" title="1、数据操作不同"></a>1、数据操作不同</h3><h3 id="2、内存管理机制不同"><a href="#2、内存管理机制不同" class="headerlink" title="2、内存管理机制不同"></a>2、内存管理机制不同</h3><h3 id="3、性能不同"><a href="#3、性能不同" class="headerlink" title="3、性能不同"></a>3、性能不同</h3><h3 id="4、集群管理不同"><a href="#4、集群管理不同" class="headerlink" title="4、集群管理不同"></a>4、集群管理不同</h3>]]></content>
+      <categories>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>Redis</tag>
+        <tag>Memcache</tag>
+        <tag>缓存</tag>
       </tags>
   </entry>
 </search>
