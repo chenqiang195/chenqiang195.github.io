@@ -1,25 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hexo基础</title>
-    <url>/notes/53593.html</url>
-    <content><![CDATA[<h2 id="常见命令"><a href="#常见命令" class="headerlink" title="常见命令"></a>常见命令</h2><h3 id="启动服务器。默认情况下，访问网址为：-http-localhost-4000"><a href="#启动服务器。默认情况下，访问网址为：-http-localhost-4000" class="headerlink" title="启动服务器。默认情况下，访问网址为： http://localhost:4000/"></a>启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/">http://localhost:4000/</a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-<p>| 该命令可以简写为： <code>hexo s</code></p>
-<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-<p>| 该命令可以简写为： <code>hexo d</code></p>
-<h3 id="清除缓存"><a href="#清除缓存" class="headerlink" title="清除缓存"></a>清除缓存</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
-<p>清除缓存文件 (db.json) 和已生成的静态文件 (public)。<br>在某些情况（尤其是更换主题后），发现对站点的更改无论如何也不生效，可能需要运行该命令。</p>
-<h3 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">&quot;文章标题&quot;</span></span><br></pre></td></tr></table></figure>
-<p>文章模板基础设置</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 文章标题</span><br><span class="line">categories:</span><br><span class="line"><span class="bullet">-</span> 一级分类</span><br><span class="line"><span class="bullet">-</span> 二级分类</span><br><span class="line">tags:</span><br><span class="line"><span class="bullet">-</span> 标签1</span><br><span class="line">  abbrlink: 文章ID</span><br><span class="line"><span class="section">  date: 创建时间</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Laravel设置PHP错误级别</title>
     <url>/notes/1467.html</url>
     <content><![CDATA[<h3 id="一、Laravel配置"><a href="#一、Laravel配置" class="headerlink" title="一、Laravel配置"></a>一、Laravel配置</h3><p>在项目路径 <code>/app/Providers/AppServiceProvider.php</code> 文件中找到 <code>boot()</code> 方法，新增一行代码。</p>
@@ -47,6 +28,25 @@
         <tag>Laravel</tag>
         <tag>PHP</tag>
         <tag>错误报警</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo基础</title>
+    <url>/notes/53593.html</url>
+    <content><![CDATA[<h2 id="常见命令"><a href="#常见命令" class="headerlink" title="常见命令"></a>常见命令</h2><h3 id="启动服务器。默认情况下，访问网址为：-http-localhost-4000"><a href="#启动服务器。默认情况下，访问网址为：-http-localhost-4000" class="headerlink" title="启动服务器。默认情况下，访问网址为： http://localhost:4000/"></a>启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/">http://localhost:4000/</a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<p>| 该命令可以简写为： <code>hexo s</code></p>
+<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<p>| 该命令可以简写为： <code>hexo d</code></p>
+<h3 id="清除缓存"><a href="#清除缓存" class="headerlink" title="清除缓存"></a>清除缓存</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+<p>清除缓存文件 (db.json) 和已生成的静态文件 (public)。<br>在某些情况（尤其是更换主题后），发现对站点的更改无论如何也不生效，可能需要运行该命令。</p>
+<h3 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">&quot;文章标题&quot;</span></span><br></pre></td></tr></table></figure>
+<p>文章模板基础设置</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 文章标题</span><br><span class="line">categories:</span><br><span class="line"><span class="bullet">-</span> 一级分类</span><br><span class="line"><span class="bullet">-</span> 二级分类</span><br><span class="line">tags:</span><br><span class="line"><span class="bullet">-</span> 标签1</span><br><span class="line">  abbrlink: 文章ID</span><br><span class="line"><span class="section">  date: 创建时间</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
